@@ -5,11 +5,11 @@ branches:
   only: master
 env:
   global:
-  - S3_BUCKET_NAME=
-  - CODEDEPLOY_APPLICATION=
-  - CODEDEPLOY_GROUP=
-  - REGION=ap-northeast-1
-  - LOCAL_DIR=deploy
+    - S3_BUCKET_NAME=joseph-codedeploy-bucket
+     - CODEDEPLOY_APPLICATION=Joseph-codedeploy-app
+    - CODEDEPLOY_GROUP=joseph-deployment-group
+    - REGION=ap-northeast-1
+    - LOCAL_DIR=deploy
 script:
 - gradle build
 - mkdir ${LOCAL_DIR}
